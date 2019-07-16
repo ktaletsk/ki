@@ -5,6 +5,5 @@ conda config --append envs_dirs $PWD/.env
 eval "$(conda shell.bash hook)"
 conda activate $ENV_NAME
 pip install --user ipykernel
-python -m ipykernel install --user --name=Python-$ENV_NAME
-conda deactivate
+python -m ipykernel install --user --name=$ENV_NAME --display-name "Python [$ENV_NAME]"
 
